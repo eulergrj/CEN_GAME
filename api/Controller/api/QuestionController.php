@@ -12,6 +12,7 @@ class QuestionController extends BaseController {
             try {
                 $questionModel = new QuestionModel();
                  
+                var_dump($_GET);
                 $arrQuestions = $questionModel->getQuestions($_GET['level']);                
                 $responseData = json_encode($arrQuestions);
 
