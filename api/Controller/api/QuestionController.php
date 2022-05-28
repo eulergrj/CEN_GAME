@@ -1,11 +1,9 @@
 <?php
-class QuestionController extends BaseController
-{
+class QuestionController extends BaseController {
     /**
      * "/question/list" Endpoint - Get list of questions
      */
-    public function listAction()
-    {
+    public function listAction(){
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
         $arrQueryStringParams = $this->getQueryStringParams();
@@ -13,14 +11,10 @@ class QuestionController extends BaseController
         if (strtoupper($requestMethod) == 'GET') {
             try {
                 $questionModel = new QuestionModel();
- 
-                $intLimit = 10;
-                if (isset($arrQueryStringParams['limit']) && $arrQueryStringParams['limit']) {
-                    $intLimit = $arrQueryStringParams['limit'];
-                }
- 
-                $arrQuestions = $questionModel->getQuestions($intLimit);
+                 
+                $arrQuestions = $questionModel->getQuestions($_GET['level']);                
                 $responseData = json_encode($arrQuestions);
+
             } catch (Error $e) {
                 $strErrorDesc = $e->getMessage().'Something went wrong! Please contact support.';
                 $strErrorHeader = 'HTTP/1.1 500 Internal Server Error';

@@ -1,6 +1,5 @@
 <?php
-class Database
-{
+class Database{
     protected $connection = null;
  
     public function __construct()
