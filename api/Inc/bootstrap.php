@@ -1,6 +1,4 @@
 <?php
-var_dump("PROJECT_ROOT_PATH", __DIR__ . "/../");
-die();
 // define("PROJECT_ROOT_PATH", __DIR__ . "/../");
  
 // // include main configuration file
