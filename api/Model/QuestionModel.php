@@ -18,7 +18,7 @@ class QuestionModel extends Database {
 
             $qs1[$key]["answers"] = $answers;
         }
-        $arr['1'] = $qs1;
+        $arr['room_1'] = $qs1;
 
         // Get 2nd room questions
         $qs1 = $this->select("SELECT * FROM questions WHERE questions.room = 2 AND questions.level <= ? ORDER BY RAND () LIMIT 4", ["i", $level]); 
@@ -31,7 +31,7 @@ class QuestionModel extends Database {
 
             $qs1[$key]["answers"] = $answers;
         }
-        $arr['2'] = $qs1;
+        $arr['room_2'] = $qs1;
 
 
         // Get 3rd room questions
@@ -45,7 +45,7 @@ class QuestionModel extends Database {
 
             $qs1[$key]["answers"] = $answers;
         }
-        $arr['3'] = $qs1;
+        $arr['room_3'] = $qs1;
 
 
         // Get 4th room questions
@@ -59,7 +59,7 @@ class QuestionModel extends Database {
 
             $qs1[$key]["answers"] = $answers;
         }
-        $arr['4'] = $qs1;
+        $arr['room_4'] = $qs1;
 
 
 
