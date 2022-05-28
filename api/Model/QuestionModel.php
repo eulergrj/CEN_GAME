@@ -2,10 +2,10 @@
 require_once PROJECT_ROOT_PATH . "/Model/Database.php";
  
 class QuestionModel extends Database {
-    public function getQuestions($level){         
+    public function getQuestions(){         
         $arr = [];
 
-        var_dump($_GET['level']);
+        $level = $_GET['level'];
 
         // Get 1st room questions
         $qs1 = $this->select("SELECT * FROM questions WHERE questions.room = 1 AND questions.level <= ? ORDER BY RAND () LIMIT 4", ["i", $level]); 
