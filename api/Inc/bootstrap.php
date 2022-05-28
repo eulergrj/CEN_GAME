@@ -1,4 +1,5 @@
 <?php
+echo "test";
 // define("PROJECT_ROOT_PATH", __DIR__ . "/../");
  
 // // include main configuration file
