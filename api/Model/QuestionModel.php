@@ -5,6 +5,8 @@ class QuestionModel extends Database {
     public function getQuestions($level){         
         $arr = [];
 
+        var_dump($level);
+
         // Get 1st room questions
         $qs1 = $this->select("SELECT * FROM questions WHERE questions.room = 1 AND questions.level <= ? ORDER BY RAND () LIMIT 4", ["i", $level]); 
         foreach($qs1 as $key => $question){
