@@ -8,78 +8,94 @@
         <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta charset="utf-8"/>
-
+        
         <!-- Set the title bar of the page -->
-        <title>Created with GameMaker</title>
+        <title>Uma Aventura Cibersegura!</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-        <!-- Set the background colour of the document -->
-        <style>
-            body {
-              background: #0;
-              color:#cccccc;
-              margin: 0px;
-              padding: 0px;
-              border: 0px;
-            }
-            canvas {
-                      image-rendering: optimizeSpeed;
-                      -webkit-interpolation-mode: nearest-neighbor;
-                      -ms-touch-action: none;
-                      margin: 0px;
-                      padding: 0px;
-                      border: 0px;
-            }
-            :-webkit-full-screen #canvas {
-                 width: 100%;
-                 height: 100%;
-            }
-            div.gm4html5_div_class
-            {
-              margin: 0px;
-              padding: 0px;
-              border: 0px;
-            }
-            /* START - Login Dialog Box */
-            div.gm4html5_login
-            {
-                 padding: 20px;
-                 position: absolute;
-                 border: solid 2px #000000;
-                 background-color: #404040;
-                 color:#00ff00;
-                 border-radius: 15px;
-                 box-shadow: #101010 20px 20px 40px;
-            }
-            div.gm4html5_cancel_button
-            {
-                 float: right;
-            }
-            div.gm4html5_login_button
-            {
-                 float: left;
-            }
-            div.gm4html5_login_header
-            {
-                 text-align: center;
-            }
-            /* END - Login Dialog Box */
-            :-webkit-full-screen {
-               width: 100%;
-               height: 100%;
-            }
-        </style>
     </head>
 
     <body>
-        <div class="gm4html5_div_class" id="gm4html5_div_id">
-            <!-- Create the canvas element the game draws to -->
-            <canvas id="canvas" width="960" height="672" >
-                     <p>Your browser doesn't support HTML5 canvas.</p>
-            </canvas>
+        
+        <a href="#" id="menu-btn">
+            <img src="./assets/menu.png" alt="Menu" class="menu">
+        </a>
+        <div id="menu">
+            <div class="wrapper">
+                <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+                <img src="./assets/logo.png" alt="Uma Aventura Cibersegura" class="logo">
+                <ul class="menu-list">
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#howtoModal">Como Jogar</a></li>
+                    <li><a href="./leaderboard.php" target="_blank">Classificação</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#creditModal">Créditos</a></li>                    
+                </ul>
+            </div>
+        </div>
+        <div id="gameWrapper">
+            <iframe id="gameWindow" src="game.html" width="965" height="678"></iframe>
         </div>
 
-        <!-- Run the game code -->
-        <script type="text/javascript" src="html5game/CEN.js?MWFZB=944324587"></script>
-        <script>window.onload = GameMaker_Init;</script>
+
+        <!-- Modal Como Jogar -->
+        <div class="modal fade" id="howtoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Como Jogar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">                    
+                        <p>Controle seu personagem com WASD ou as setas direcionais do seu teclado</p>
+                        <p>Responda a perguntas precionando o numero correspondente no seu teclado ( 1 2 3 ou 4 )</p>
+                        <p>A cada resposta correcta acumula-se pontos.</p>
+                        <p>O objetivo e Chegar ao fim do jogo respondendo a maior quantidade de perguntas correctamente.</p>
+                        <p>Finalize o Jogo e compare seus resultados com seus amigos na pagina de <a href="./leaderboard.php" target="_blank">Classificação</a></p>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Creditos -->
+        <div class="modal fade" id="creditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Como Jogar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Bruno Neves nº 201910108</li>
+                            <li>Daniel Gonçalves nº 4332</li>
+                            <li>Euler Ribeiro nº 201910328</li>
+                            <li>Jesus Faria nº 2019101052</li>
+                            <li>Sandro Alves nº 201910330</li>
+                            <li>Vítor Costa nº 2019103248</li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+
+                $("#menu-btn").click(function(e){
+                    $("#menu").css("display", 'flex');
+                });
+
+                $(".close-menu").click(function(e){
+                    $("#menu").css("display", 'none');
+                });
+
+            });
+        </script>
+        
     </body>
 </html>

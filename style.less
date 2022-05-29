@@ -1,0 +1,106 @@
+body{
+    padding: 0;
+    margin: 0;    
+    background-color: #ebe1f6 !important;
+    border: 10px solid #353556 !important;
+    overflow: hidden;
+}
+
+#menu-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+#menu{    
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(53,53,86,.8);
+
+    .wrapper{
+        position: relative;
+        width: 50vh;
+        height: auto;
+        background-color: #dcd2e6;
+        border-radius: 10px;
+        border: 4px solid #353556;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+
+        .close-menu{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+
+            i{
+                font-size: 25px;
+                color: #353556;
+            }
+        }
+
+        .logo{
+            text-align: center;
+            display: block;
+            width: 70%;
+            height: auto;
+        }
+
+        ul{
+            width: 90%;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            li{
+                box-sizing: border-box;
+                margin: 5px 0;
+                padding: 0;
+                width: 100%;
+                height: 50px;
+                border: 2px solid #353556;                
+                background-color: #ebe1f6;
+                font-size: 25px;
+                font-weight: bolder;
+                text-transform: uppercase;                
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #353556;
+                    transition: linear all .2s;
+
+                    &:hover{
+                        color: #fff;
+                        background-color: #353556;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#gameWrapper{
+    display: flex;
+    width: 98vw;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+
+    #gameWindow{              
+        border: 0;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
