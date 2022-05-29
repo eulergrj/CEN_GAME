@@ -28,6 +28,20 @@ class Database{
         }
         return false;
     }
+
+    public function save($query = "" , $params = [])
+    {
+        try {
+            $stmt = $this->executeStatement( $query , $params );
+            $result = $stmt->get_result();
+            $stmt->close();
+ 
+            return $stmt;
+        } catch(Exception $e) {
+            throw New Exception( $e->getMessage() );
+        }
+        return false;
+    }
  
     private function executeStatement($query = "" , $params = [])
     {
