@@ -34,6 +34,9 @@
     </head>
 
     <style>
+        body{
+            overflow: auto !important;
+        }
         .leaderboard{
             width: 100vw;
             height: 97vh;
