@@ -37,10 +37,7 @@ class QuestionController extends BaseController {
         }
     }
 
-    public function savescoreAction(){
-
-        var_dump("TEST");
-        die();
+    public function savescoreAction(){        
         $strErrorDesc = '';
         $requestMethod = $_SERVER["REQUEST_METHOD"];
         $arrQueryStringParams = $this->getQueryStringParams();
