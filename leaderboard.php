@@ -78,11 +78,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <? foreach($leaderboard as $key => $item): ?>
+                    <?php foreach($leaderboard as $key => $item): ?>
                         <tr>
-                            <td><?= $item[1];?></td>
-                            <td><?= $item[2];?></td>
-                            <td><?= $item[3];?></td>
+                            <td><?php echo $item[1];?></td>
+                            <td><?php echo $item[2];?></td>
+                            <td><?php echo $item[3];?></td>
                         </tr>
                     <? endforeach; ?>
                 </tbody>
