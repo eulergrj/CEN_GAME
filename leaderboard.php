@@ -1,3 +1,23 @@
+<?php
+
+    $leaderboard = false;
+    $mysqli = new mysqli("localhost","root","root","cen_game");
+
+    // Check connection
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();
+    }
+
+    // Perform query
+    if ($result = $mysqli->query("SELECT * FROM leaderboard ORDER BY score DESC")) {            
+        $leaderboard = $result->fetch_all();
+    }
+
+    $mysqli -> close();
+
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>        
@@ -13,6 +33,23 @@
 
     </head>
 
+    <style>
+        .leaderboard{
+            width: 100vw;
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }        
+        table{            
+            margin: 0 auto;
+            margin-top: 40px;            
+            width: 500px !important;
+            border: 2px solid #353556 !important;
+        }
+    </style>
+
     <body>
         
         <a href="#" id="menu-btn">
@@ -22,12 +59,34 @@
             <div class="wrapper">
                 <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
                 <img src="./assets/logo.png" alt="Uma Aventura Cibersegura" class="logo">
-                <ul class="menu-list">
+                <ul class="menu-list">                    
                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#howtoModal">Como Jogar</a></li>
-                    <li><a href="./leaderboard.html" target="_blank">Classificação</a></li>
+                    <li><a href="./leaderboard.php" target="_blank">Classificação</a></li>
                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#creditModal">Créditos</a></li>                    
                 </ul>
             </div>
+        </div>
+
+        <div class="leaderboard">
+            <h3>Classificação</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Score</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <? foreach($leaderboard as $key => $item): ?>
+                        <tr>
+                            <td><?= $item[1];?></td>
+                            <td><?= $item[2];?></td>
+                            <td><?= $item[3];?></td>
+                        </tr>
+                    <? endforeach; ?>
+                </tbody>
+            </table>
         </div>
         
 
