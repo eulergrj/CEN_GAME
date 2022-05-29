@@ -78,7 +78,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($leaderboard as $key => $item): ?>
+                    <? foreach($leaderboard as $key => $item): ?>
                         <tr>
                             <td><?= echo $item[1];?></td>
                             <td><?= echo $item[2];?></td>
