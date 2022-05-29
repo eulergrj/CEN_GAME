@@ -68,9 +68,6 @@ class QuestionModel extends Database {
     }
 
     public function saveScore(){    
-        
-        var_dump($_GET);
-        die();
                
         $data = [];
         $query = "INSERT INTO `leaderboard`(`name`, `score`, `date`) VALUES ('".$_GET['name']."', ".intval($_GET['score']).", '".date('Y-m-d H:i:s')."')";
