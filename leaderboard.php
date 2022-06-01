@@ -72,7 +72,7 @@
 
         <div class="leaderboard">
             <h3>Classificação</h3>
-            <div style="max-height: 450px; overflow-y: auto">
+            <div style="max-height: 450px; overflow-y: auto; padding: 0 80px">
                 <table class="table">
                     <thead>
                         <tr>
