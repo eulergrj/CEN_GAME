@@ -71,7 +71,7 @@
         </div>
 
         <div class="leaderboard">
-            <h3>Classificação</h3>
+            <h3 style="text-trasnform: uppercase; margin-bottom: 30px">Classificação</h3>
             <div style="max-height: 450px; overflow-y: auto; padding: 0 80px">
                 <table class="table">
                     <thead>
