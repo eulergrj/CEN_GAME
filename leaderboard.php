@@ -93,6 +93,47 @@
                 </table>
             </div>
         </div>
+
+        <!-- Modal Como Jogar -->
+        <div class="modal fade" id="howtoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Como Jogar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">                    
+                        <p>Controle seu personagem com WASD ou as setas direcionais do seu teclado</p>
+                        <p>Responda a perguntas precionando o numero correspondente no seu teclado ( 1 2 3 ou 4 )</p>
+                        <p>A cada resposta correcta acumula-se pontos.</p>
+                        <p>O objetivo e Chegar ao fim do jogo respondendo a maior quantidade de perguntas correctamente.</p>
+                        <p>Finalize o Jogo e compare seus resultados com seus amigos na pagina de <a href="./leaderboard.php" target="_blank">Classificação</a></p>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Creditos -->
+        <div class="modal fade" id="creditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Créditos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Bruno Neves nº 201910108</li>
+                            <li>Daniel Gonçalves nº 4332</li>
+                            <li>Euler Ribeiro nº 201910328</li>
+                            <li>Jesus Faria nº 2019101052</li>
+                            <li>Sandro Alves nº 201910330</li>
+                            <li>Vítor Costa nº 2019103248</li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+        </div>
         
 
         <script>
