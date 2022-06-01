@@ -64,7 +64,7 @@
                 <img src="./assets/logo.png" alt="Uma Aventura Cibersegura" class="logo">
                 <ul class="menu-list">                    
                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#howtoModal">Como Jogar</a></li>
-                    <li><a href="./leaderboard.php" target="_blank">Classificação</a></li>
+                    <li><a href="./" target="_blank">Jogar</a></li>
                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#creditModal">Créditos</a></li>                    
                 </ul>
             </div>
